@@ -141,6 +141,15 @@ a {
   padding: 10px;
 }
 
+/* modified by zhongxin */
+#skills {
+  display: block;
+}
+.education-entry h3 {
+  margin: 0 -5%;
+}
+/* the end of modified by zhongxin */
+
 .center-content {
   padding: 2.5% 5%;
 }
