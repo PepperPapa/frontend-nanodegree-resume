@@ -74,7 +74,7 @@ function inName(nameString) {
 
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName(bio.name) || function(){};
+    var iName = inName(octopus.getBio().name) || function(){};
     $('#name').html(iName);
   });
 });
@@ -135,18 +135,20 @@ function initializeMap() {
     var locations = [];
 
     // adds the single location property from bio to the locations array
-    locations.push(bio.contacts.location);
+    locations.push(octopus.getBio().contacts.location);
 
     // iterates through school locations and appends each location to
     // the locations array
-    for (var school in education.schools) {
-      locations.push(education.schools[school].location);
+    var schools = octopus.getEdu().schools;
+    for (var school in schools) {
+      locations.push(schools[school].location);
     }
 
     // iterates through work locations and appends each location to
     // the locations array
-    for (var job in work.jobs) {
-      locations.push(work.jobs[job].location);
+    var jobs = octopus.getJobs();
+    for (var job in jobs) {
+      locations.push(jobs[job].location);
     }
 
     return locations;

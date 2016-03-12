@@ -66,7 +66,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Work Experience</h2>
     </div>
     <div id="projects">
-      <h2>Projects just for test</h2>
+      <h2>Projects</h2>
     </div>
     <div id="education" class="gray">
       <h2>Education</h2>
@@ -88,55 +88,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
   <script src="js/resumeBuilder.js"></script>
 
-
-  <!--
-  These scripts are written in JavaScript. You'll be breaking them down as part of
-  a quiz. Essentially, the next few lines are checking to see if you have not
-  changed each section of the resume. If you have not made any changes to a section
-  of the resume, then that part of the resume does not show up. More on this in the
-  course.
-  -->
-
-  <script type="text/javascript">
-    // Notice how all of a sudden there's JavaScript inside this HTML
-    // document? You can write JavaScript between <script> tags. At the end of your
-    // JavaScript, don't forget the closing script tag with the slash (/).
-
-
-    // Also, this is a JavaScript style comment. You can comment in JavaScript with:
-
-    //   two slashes for all following characters on a single line, or
-
-    /*
-        an opening and closing set of slash asterisks for block comments.
-    */
-
-
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.backgroundColor = 'black';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.backgroundColor = 'black';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.backgroundColor = 'black';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.backgroundColor = 'black';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.backgroundColor = 'black';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.backgroundColor = 'black';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.backgroundColor = 'black';
-    }
-  </script>
   <!--callback=initializeMap, 中initializeMap必须在js脚本中创建同名函数，否则会
   报错-->
   <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDECcFSTGlCwrIY6Oopv87JozbQDkko_e0&signed_in=true&libraries=places&callback=initializeMap" async defer></script>
+  src="https://maps.googleapis.com/maps/api/js?
+  key=AIzaSyDECcFSTGlCwrIY6Oopv87JozbQDkko_e0&
+  signed_in=true&libraries=places&
+  callback=initializeMap" async defer></script>
 </body>
 </html>
